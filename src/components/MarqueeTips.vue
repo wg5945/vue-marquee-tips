@@ -24,8 +24,9 @@
     },
     methods: {
       init () {
-        utils.deleteKeyFrame('marquee')
-        utils.insertKeyFrame(`@keyframes marquee {
+        let animationName = 'marquee' + Math.round(new Date().getTime() / 1000)
+        utils.deleteKeyFrame(animationName)
+        utils.insertKeyFrame(`@keyframes ${animationName} {
           0% {
             text-indent: ${utils.getWidthHeight().width + 10}px
           }
@@ -33,7 +34,7 @@
             text-indent: ${-utils.getTextWidth(this.content, this.font)}px
           }
         }`)
-        document.querySelectorAll('.marquee-tips')[0].style.animationDuration = this.speed + 's'
+        document.getElementsByClassName('marquee-tips')[0].style.animation = animationName + ' ' + this.speed + 's' + ' linear infinite'
       }
     },
     watch: {
@@ -50,6 +51,5 @@
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
-    animation: marquee linear infinite;
   }
 </style>
