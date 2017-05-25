@@ -3,7 +3,15 @@
 > A Vue component to marquee
 
 ## Demo
-[https://wg5945.github.io/vue-marquee-tips](url)
+<p align="center">
+   <a href="https://wg5945.github.io/vue-marquee-tips">
+    <img src="https://wg5945.github.io/vue-marquee-tips/home.png" width="100" alt="">
+  </a>
+  <br>
+  <a href="https://wg5945.github.io/vue-marquee-tips">
+    online demo >>
+  </a>
+</p>
 
 ## Build Setup
 
