@@ -14,11 +14,13 @@ export default {
   deleteKeyFrame (ruleName) {
     let cssrules = (document.all) ? 'rules' : 'cssRules'
     let i
-    for (i = 0; i < document.styleSheets[0][cssrules].length; i += 1) {
-      let rule = document.styleSheets[0][cssrules][i]
-      if (rule.name === ruleName || rule.selectorText === '.' + ruleName) {
-        document.styleSheets[0].deleteRule(i)
-        break
+    if (document.styleSheets && document.styleSheets.length && document.styleSheets[0][cssrules]) {
+      for (i = 0; i < document.styleSheets[0][cssrules].length; i += 1) {
+        let rule = document.styleSheets[0][cssrules][i]
+        if (rule.name === ruleName || rule.selectorText === '.' + ruleName) {
+          document.styleSheets[0].deleteRule(i)
+          break
+        }
       }
     }
   },
