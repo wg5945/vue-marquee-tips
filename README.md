@@ -5,7 +5,7 @@
 ## Demo
 <p align="center">
    <a href="https://wg5945.github.io/vue-marquee-tips">
-    <img src="https://wg5945.github.io/vue-marquee-tips/home.png" width="100" alt="">
+    <img src="https://wg5945.github.io/vue-marquee-tips/static/img/home.png" width="100" alt="">
   </a>
   <br>
   <a href="https://wg5945.github.io/vue-marquee-tips">
