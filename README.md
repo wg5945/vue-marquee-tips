@@ -2,6 +2,9 @@
 
 > A Vue component to marquee
 
+## Demo
+[https://wg5945.github.io/vue-marquee-tips](url)
+
 ## Build Setup
 
 ``` bash
