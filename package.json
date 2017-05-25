@@ -4,6 +4,7 @@
   "description": "A Vue component to marquee-tips",
   "author": "wg <247026287@qq.com>",
   "private": false,
+  "main": "pub/vue-marquee-tips.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -60,6 +61,10 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wg5945/vue-marquee-tips.git"
   },
   "browserslist": [
     "> 1%",
