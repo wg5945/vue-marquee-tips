@@ -1,14 +1,13 @@
 {
   "name": "vue-marquee-tips",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue component to marquee-tips",
   "author": "wg <247026287@qq.com>",
   "private": false,
-  "main": "pub/vue-marquee-tips.min.js",
+  "main": "index.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "build-components": "node build/build-components.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
