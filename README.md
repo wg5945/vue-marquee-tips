@@ -25,8 +25,25 @@ npm run dev
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+```javascript
+import MarqueeTips from 'vue-marquee-tips'
+export default {
+  components: {
+    MarqueeTips
+  }
+}
+```
+```html
+<MarqueeTips content="我是一个短短的提示！"></MarqueeTips>
+```
+## Options
+
+| Name  | Type |  Default |  Description |
+|---|---|---|---|
+| `content`  | `String`  | `undefined`  |  tooltips's content |
+| `font`  | `String`  |  `16px sans-serif` | tooltips's font  |
+| `speed`  | `Number`  |  `5` |  animation-duration |
+| `fullScreen`  |  `Boolean` | `true` |  is fullScreen |

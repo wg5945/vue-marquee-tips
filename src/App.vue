@@ -3,14 +3,19 @@
     <img src="./assets/logo.png" style="width: 20%">
     <br><br>
     <div>
-      <input type="radio" id="one" :value="1" v-model="picked">
-      <label for="one">又短又慢的提示</label>
+      <MarqueeTips content="我是一个短短的提示！"></MarqueeTips>
       <br>
-      <input type="radio" id="two" :value="2" v-model="picked">
-      <label for="two">又长又快的提示</label>
-      <br><br><br>
-      <MarqueeTips content="我是一个短短的提示！" v-if="picked==1"></MarqueeTips>
-      <MarqueeTips content="我是一个比较长的提示！拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧~~~~" v-else style="color: red" :speed="3"></MarqueeTips>
+      <MarqueeTips content="我是一个比较长的提示！拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧~~~~" style="color: red"
+                   :speed="3"></MarqueeTips>
+      <br>
+      <MarqueeTips content="加大字体提示：BigBigBigBig" :fullScreen="false" style="font-size: 30px"
+                   font="30px sans-serif"></MarqueeTips>
+      <br>
+      <div class="room">
+        <MarqueeTips content="容器内提示：22222222222222222" :fullScreen="false" :speed="3"></MarqueeTips>
+        <br>
+        <MarqueeTips content="容器内提示：1111" :fullScreen="false"></MarqueeTips>
+      </div>
     </div>
   </div>
 </template>
@@ -24,9 +29,7 @@
       MarqueeTips
     },
     data () {
-      return {
-        picked: 1
-      }
+      return {}
     }
   }
 </script>
@@ -39,5 +42,11 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  .room {
+    width: 200px;
+    margin: 0 auto;
+    background-color: orange;
   }
 </style>

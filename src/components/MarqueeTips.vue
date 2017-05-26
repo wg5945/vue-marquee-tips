@@ -15,6 +15,10 @@
       speed: {
         type: Number,
         default: 5
+      },
+      fullScreen: {
+        type: Boolean,
+        default: true
       }
     },
     mounted () {
@@ -24,17 +28,18 @@
     },
     methods: {
       init () {
-        let animationName = 'marquee' + Math.round(new Date().getTime() / 1000)
+        let _this = this.$el
+        let animationName = 'marquee' + Math.random().toString(36).substring(3, 8)
         utils.deleteKeyFrame(animationName)
         utils.insertKeyFrame(`@keyframes ${animationName} {
           0% {
-            text-indent: ${utils.getWidthHeight().width + 10}px
+            text-indent: ${!this.fullScreen && _this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width + 10}px
           }
           100% {
             text-indent: ${-utils.getTextWidth(this.content, this.font)}px
           }
         }`)
-        document.getElementsByClassName('marquee-tips')[0].style.animation = animationName + ' ' + this.speed + 's' + ' linear infinite'
+        _this.style.animation = animationName + ' ' + this.speed + 's' + ' linear infinite'
       }
     },
     watch: {
