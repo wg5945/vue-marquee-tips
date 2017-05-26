@@ -2,23 +2,42 @@
   <div id="app">
     <img src="./assets/logo.png" style="width: 20%">
     <br><br>
-    <router-view></router-view>
+    <div>
+      <input type="radio" id="one" :value="1" v-model="picked">
+      <label for="one">又短又慢的提示</label>
+      <br>
+      <input type="radio" id="two" :value="2" v-model="picked">
+      <label for="two">又长又快的提示</label>
+      <br><br><br>
+      <MarqueeTips content="我是一个短短的提示！" v-if="picked==1"></MarqueeTips>
+      <MarqueeTips content="我是一个比较长的提示！拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧~~~~" v-else style="color: red" :speed="3"></MarqueeTips>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import MarqueeTips from './components/MarqueeTips.vue'
+
+  export default {
+    name: 'app',
+    components: {
+      MarqueeTips
+    },
+    data () {
+      return {
+        picked: 1
+      }
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
