@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/vue-marquee-tips.svg)](https://www.npmjs.com/package/vue-marquee-tips)
+
 # vue-marquee-tips
 
 > A Vue component to marquee
@@ -28,6 +30,13 @@ npm run build
 ```
 
 ## Usage
+
+### NPM
+
+```shell
+npm install vue-marquee-tips --save-dev
+```
+
 ```javascript
 import MarqueeTips from 'vue-marquee-tips'
 export default {
