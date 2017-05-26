@@ -1,4 +1,5 @@
 [![npm](https://img.shields.io/npm/v/vue-marquee-tips.svg)](https://www.npmjs.com/package/vue-marquee-tips)
+[![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://www.npmjs.com/package/vue-marquee-tips)
 
 # vue-marquee-tips
 
@@ -56,3 +57,7 @@ export default {
 | `font`  | `String`  |  `16px sans-serif` | tooltips's font  |
 | `speed`  | `Number`  |  `5` |  animation-duration |
 | `fullScreen`  |  `Boolean` | `true` |  is fullScreen |
+
+## License
+
+MIT
