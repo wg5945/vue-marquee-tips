@@ -15,10 +15,6 @@
       speed: {
         type: Number,
         default: 5
-      },
-      fullScreen: {
-        type: Boolean,
-        default: true
       }
     },
     mounted () {
@@ -33,7 +29,7 @@
         utils.deleteKeyFrame(animationName)
         utils.insertKeyFrame(`@keyframes ${animationName} {
           0% {
-            text-indent: ${!this.fullScreen && _this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width + 10}px
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
           }
           100% {
             text-indent: ${-utils.getTextWidth(this.content, this.font)}px

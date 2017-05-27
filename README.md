@@ -48,6 +48,13 @@ export default {
 ```
 ```html
 <MarqueeTips content="我是一个短短的提示！"></MarqueeTips>
+<MarqueeTips content="我是一个比较长的提示！拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧~~~~" style="color: red" :speed="3"></MarqueeTips>
+<MarqueeTips content="加大字体提示：BigBigBigBig" style="font-size: 30px" font="30px sans-serif"></MarqueeTips>
+             
+<div style="width: 200px;margin: 0 auto;background-color: orange;">
+  <MarqueeTips content="容器内提示：22222222222222222" :speed="3"></MarqueeTips>
+  <MarqueeTips content="容器内提示：1111"></MarqueeTips>
+</div>
 ```
 ## Options
 
@@ -56,7 +63,6 @@ export default {
 | `content`  | `String`  | `undefined`  |  tooltips's content |
 | `font`  | `String`  |  `16px sans-serif` | tooltips's font  |
 | `speed`  | `Number`  |  `5` |  animation-duration |
-| `fullScreen`  |  `Boolean` | `true` |  is fullScreen |
 
 ## License
 

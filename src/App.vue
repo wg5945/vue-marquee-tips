@@ -8,13 +8,13 @@
       <MarqueeTips content="我是一个比较长的提示！拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧~~~~" style="color: red"
                    :speed="3"></MarqueeTips>
       <br>
-      <MarqueeTips content="加大字体提示：BigBigBigBig" :fullScreen="false" style="font-size: 30px"
+      <MarqueeTips content="加大字体提示：BigBigBigBig" style="font-size: 30px"
                    font="30px sans-serif"></MarqueeTips>
       <br>
       <div class="room">
-        <MarqueeTips content="容器内提示：22222222222222222" :fullScreen="false" :speed="3"></MarqueeTips>
+        <MarqueeTips content="容器内提示：22222222222222222" :speed="3"></MarqueeTips>
         <br>
-        <MarqueeTips content="容器内提示：1111" :fullScreen="false"></MarqueeTips>
+        <MarqueeTips content="容器内提示：1111"></MarqueeTips>
       </div>
     </div>
   </div>
