@@ -35,7 +35,34 @@
             text-indent: ${-utils.getTextWidth(this.content, this.font)}px
           }
         }`)
+        utils.insertKeyFrame(`@-webkit-keyframes ${animationName} {
+          0% {
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+          }
+          100% {
+            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+          }
+        }`)
+        utils.insertKeyFrame(`@-moz-keyframes ${animationName} {
+          0% {
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+          }
+          100% {
+            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+          }
+        }`)
+        utils.insertKeyFrame(`@-o-keyframes ${animationName} {
+          0% {
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+          }
+          100% {
+            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+          }
+        }`)
         _this.style.animation = animationName + ' ' + this.speed + 's' + ' linear infinite'
+        _this.style.webkitAnimation = animationName + ' ' + this.speed + 's' + ' linear infinite'
+        _this.style.mozAnimation = animationName + ' ' + this.speed + 's' + ' linear infinite'
+        _this.style.oAnimation = animationName + ' ' + this.speed + 's' + ' linear infinite'
       }
     },
     watch: {
