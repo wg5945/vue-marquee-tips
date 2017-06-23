@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import utils from './Utils'
+  const {insertKeyFrame, deleteKeyFrame, getWidthHeight, getTextWidth} = require('./Utils')
   export default{
     name: 'MarqueeTips',
     props: {
@@ -26,37 +26,37 @@
       init () {
         let _this = this.$el
         let animationName = 'marquee' + Math.random().toString(36).substring(3, 8)
-        utils.deleteKeyFrame(animationName)
-        utils.insertKeyFrame(`@keyframes ${animationName} {
+        deleteKeyFrame(animationName)
+        insertKeyFrame(`@keyframes ${animationName} {
           0% {
-            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : getWidthHeight().width) + 10}px
           }
           100% {
-            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+            text-indent: ${-getTextWidth(this.content, this.font)}px
           }
         }`)
-        utils.insertKeyFrame(`@-webkit-keyframes ${animationName} {
+        insertKeyFrame(`@-webkit-keyframes ${animationName} {
           0% {
-            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : getWidthHeight().width) + 10}px
           }
           100% {
-            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+            text-indent: ${-getTextWidth(this.content, this.font)}px
           }
         }`)
-        utils.insertKeyFrame(`@-moz-keyframes ${animationName} {
+        insertKeyFrame(`@-moz-keyframes ${animationName} {
           0% {
-            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : getWidthHeight().width) + 10}px
           }
           100% {
-            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+            text-indent: ${-getTextWidth(this.content, this.font)}px
           }
         }`)
-        utils.insertKeyFrame(`@-o-keyframes ${animationName} {
+        insertKeyFrame(`@-o-keyframes ${animationName} {
           0% {
-            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : utils.getWidthHeight().width) + 10}px
+            text-indent: ${(_this.parentNode ? _this.parentNode.innerWidth || _this.parentNode.clientWidth : getWidthHeight().width) + 10}px
           }
           100% {
-            text-indent: ${-utils.getTextWidth(this.content, this.font)}px
+            text-indent: ${-getTextWidth(this.content, this.font)}px
           }
         }`)
         _this.style.animation = animationName + ' ' + this.speed + 's' + ' linear infinite'
