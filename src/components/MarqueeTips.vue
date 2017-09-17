@@ -66,7 +66,8 @@
       }
     },
     watch: {
-      content: 'init'
+      content: 'init',
+      speed: 'init'
     }
   }
 </script>
