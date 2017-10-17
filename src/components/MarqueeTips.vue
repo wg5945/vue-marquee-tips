@@ -1,5 +1,5 @@
 <template>
-  <p class="marquee-tips">{{content}}</p>
+  <p class="marquee-tips" v-html="content"></p>
 </template>
 
 <script>
