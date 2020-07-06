@@ -1,10 +1,15 @@
 function insertKeyFrame (rule) {
+  var fail
   if (document.styleSheets && document.styleSheets.length) {
     try {
       document.styleSheets[0].insertRule(rule, 0)
     } catch (ex) {
+      fail = true
     }
   } else {
+    fail = true
+  }
+  if (fail) {
     var style = document.createElement('style')
     style.innerHTML = rule
     document.head.appendChild(style)
@@ -14,7 +19,7 @@ function insertKeyFrame (rule) {
 function deleteKeyFrame (ruleName) {
   var cssrules = (document.all) ? 'rules' : 'cssRules'
   var i
-  if (document.styleSheets && document.styleSheets.length && document.styleSheets[0][cssrules]) {
+  if (document.styleSheets && document.styleSheets.length && document.styleSheets[0].hasOwnProperty(cssrules)) {
     for (i = 0; i < document.styleSheets[0][cssrules].length; i += 1) {
       var rule = document.styleSheets[0][cssrules][i]
       if (rule.name === ruleName || rule.selectorText === '.' + ruleName) {
